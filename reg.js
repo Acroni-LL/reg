@@ -2,8 +2,8 @@
  * @Author: luoli
  * @Date: 2022-11-16 17:27:24
  * @LastEditors: luoli
- * @LastEditTime: 2022-11-16 22:59:15
- * @FilePath: /reg/reg.js
+ * @LastEditTime: 2022-11-17 11:54:35
+ * @FilePath: \reg\reg.js
  * @Description:reg test
  *
  */
@@ -17,3 +17,5 @@ const reg3_1 =
 // 1+{2,3}:1+{4,5}:1;1+{2,3}:2  {2,3}:1+{4,5}:1;1+{2,3}:2  1+{2,3}:1+1+{4,5}:1+1;1+{2,3}:2+{1,2}:2+1+{1,2}:2+2
 
 // TODO: 正则优化
+// 剔除错误
+//1、  {2,3}:1;

@@ -2,8 +2,8 @@
  * @Author: luoli
  * @Date: 2022-11-16 21:50:56
  * @LastEditors: luoli
- * @LastEditTime: 2022-11-16 23:16:22
- * @FilePath: /reg/demo.md
+ * @LastEditTime: 2022-11-17 14:20:29
+ * @FilePath: \reg\demo.md
  * @Description:
 -->
 
@@ -17,7 +17,16 @@
 //
 
 去除 错误形式的匹配
-1+{2,3}
-1+{2,9}:
+reg1
 1+2;
+
+reg3
+{2,3}:1+1+{4,5}:1;
+{2,3}:1+1+{4,5}:1;1+
+{2,3}:1+1+{4,5}:1;1+{2,3}
+
 没写完的都是错的
+
+修改
+reg2
+正确被拦截 1+{2,3}:1
