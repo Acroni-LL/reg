@@ -2,13 +2,13 @@
  * @Author: luoli
  * @Date: 2022-11-16 23:02:22
  * @LastEditors: luoli
- * @LastEditTime: 2022-11-17 16:26:15
+ * @LastEditTime: 2022-11-17 17:26:00
  * @FilePath: \reg\todo.md
  * @Description:
 -->
 
 #### 1、增加 js 拦截逻辑的错误输入
-
+不用写
 1+{1,2}:4
 
 #### 2、增加正则拦截形式的错误输入
