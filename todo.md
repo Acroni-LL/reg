@@ -2,8 +2,8 @@
  * @Author: luoli
  * @Date: 2022-11-16 23:02:22
  * @LastEditors: luoli
- * @LastEditTime: 2022-11-17 14:59:32
- * @FilePath: /reg/todo.md
+ * @LastEditTime: 2022-11-17 16:26:15
+ * @FilePath: \reg\todo.md
  * @Description:
 -->
 
@@ -13,9 +13,10 @@
 
 #### 2、增加正则拦截形式的错误输入
 
-如，1+{2,3}
-1+{2,9}:
-1+2;
+如
+√ 1+{2,3}
+√ 1+{2,9}:
+√  1+2;
 
 ## 解决方案
 
