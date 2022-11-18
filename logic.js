@@ -2,7 +2,7 @@
  * @Author: luoli
  * @Date: 2022-11-17 16:29:41
  * @LastEditors: luoli
- * @LastEditTime: 2022-11-18 17:25:05
+ * @LastEditTime: 2022-11-18 19:09:09
  * @FilePath: \reg\logic.js
  * @Description:
  *
@@ -331,5 +331,5 @@ console.log(1, checkGroupInput(sealGroup));
 // false 为不通过
 
 //TODO:
-// sealGroup = '1;3;4;5;6;7;7;8';
 //检查一下
+// 1+2;1+{2,3}:1
