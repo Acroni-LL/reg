@@ -2,7 +2,7 @@
  * @Author: luoli
  * @Date: 2022-11-16 22:36:37
  * @LastEditors: luoli
- * @LastEditTime: 2022-11-16 23:23:44
+ * @LastEditTime: 2022-11-18 16:00:13
  * @FilePath: /reg/seperate.html
  * @Description:
 -->
@@ -18,20 +18,5 @@
     <input type="text" id="input" />
     <button id="btn">click</button>
   </body>
-  <script>
-    let btn = window.document.getElementById('btn');
-    btn.addEventListener('click', () => {});
-    const reg3 =
-      /(\d[+])*\{\d+(,\d+)+\}:(\d+)((([+]\{\d+(,\d+)+\}:(\d+))*)(([+]\d+)*))*;((\d[+])*\{\d+(,\d+)+\}:(\d+)*((([+]\{\d+(,\d+)+\}:(\d+))*)(([+]\d+)*))*)*(\d*([+]\d*)*)*/;
-    let input = window.document.getElementById('input');
-    // 检查正则
-    input.onchange = function () {
-      console.log(reg3.test(input.value));
-      if (reg3.match(input.value)) {
-        let span = window.document.createElement('span');
-        span.innerHTML = reg3;
-        window.document.appendChild(span);
-      }
-    };
-  </script>
+  <script src="./logic.js"></script>
 </html>

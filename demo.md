@@ -2,8 +2,8 @@
  * @Author: luoli
  * @Date: 2022-11-16 21:50:56
  * @LastEditors: luoli
- * @LastEditTime: 2022-11-17 17:02:40
- * @FilePath: \reg\demo.md
+ * @LastEditTime: 2022-11-18 10:43:14
+ * @FilePath: /reg/demo.md
  * @Description:
 -->
 
@@ -34,3 +34,10 @@ reg2
 后端拦截
 {1,2}:1+1+{3,4}:3
 {1,2}:1+1+{3,5}:1
+
+应该拦截的组合
+总结，1、前后一样，2、重复
+1+1
+1+2;1+2
+1+{1,2}:1
+1+{2,3}:1;1+{2,3}:1
