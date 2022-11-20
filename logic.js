@@ -2,8 +2,8 @@
  * @Author: luoli
  * @Date: 2022-11-17 16:29:41
  * @LastEditors: luoli
- * @LastEditTime: 2022-11-18 19:09:09
- * @FilePath: \reg\logic.js
+ * @LastEditTime: 2022-11-20 18:15:15
+ * @FilePath: /reg/logic.js
  * @Description:
  *
  */
@@ -319,7 +319,23 @@ sealGroup = '{1,2,3,7,9}:1;{1,2}:1';
 sealGroup = '{1,2}:1+3;{1,2}:1;2';
 sealGroup = '1+{2,3,4,5,7}:1+6+8;1+{2,3,4,5}:3+6+7;1+2;1+{2,3}:1+{4,5,6}:1';
 sealGroup = '1+{3,2}:1;1';
-console.log(1, checkGroupInput(sealGroup));
+sealGroup = '1;1+{2,3}:1';
+sealGroup = '1+2;1+{2,3}:1';
+// console.log(1, checkGroupInput(sealGroup));
+
+const reg1 = /^\d+([+]\d+)*(;\d+([+]\d+)*)*$/; //1+2;3+4
+const reg2 = /^(\d[+])*\{\d+(,\d+)+\}:(\d+)((([+]\{\d+(,\d+)+\}:(\d+))*)(([+]\d+)*))*$/; //{1,2}:1  {1,2}:1+5  {1,2}:1+{3,4}:1 {1,2}:1+{3,4}:1+5
+// ;后面是普通组合 {2,3}:1+1+{4,5}:1;1+1+2
+const reg3_1 =
+  /(\d[+])*\{\d+(,\d+)+\}:(\d+)((([+]\{\d+(,\d+)+\}:(\d+))*)(([+]\d+)*))*(\;\d+([+]\d+)*)+/;
+//  ;后面是组 {2,3}:1+1+{4,5}:1;{2,3}:1+1 1+{2,3}:1;1+{2,3}:1+{2,3}:1+1
+const reg3_2 =
+  /(\d[+])*\{\d+(,\d+)+\}:(\d+)((([+]\{\d+(,\d+)+\}:(\d+))*)(([+]\d+)*))*(\;(\d[+])*(\{\d(,\d)+\}:\d)+)+([+]\{\d+(,\d)+\}:\d+)*([+]\d+)*/;
+const reg4 = //
+  console.log(
+    reg1.test(sealGroup) || reg2.test(sealGroup) || reg3_1.test(sealGroup) || reg3_2.test(sealGroup)
+    // reg4.test(sealGroup)
+  );
 
 // 有或 ，返回false 为不通过
 // undefined 为通过
@@ -333,3 +349,4 @@ console.log(1, checkGroupInput(sealGroup));
 //TODO:
 //检查一下
 // 1+2;1+{2,3}:1
+// 1;1+{2,3}:1
